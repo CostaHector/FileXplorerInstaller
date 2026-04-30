@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/img">
+    </qresource>
+
+    <qresource prefix="/i18n">
+        <file alias="ZH_CN">Translate/FileXplorerInstaller_zh_CN.qm</file>
+    </qresource>
+</RCC>

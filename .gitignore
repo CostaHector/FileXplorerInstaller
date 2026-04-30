@@ -1,0 +1,9 @@
+FileXplorerInstaller_zh_CN.qm
+
+CMakeLists.txt.user
+
+./*.json
+*.idx
+build/*
+.vscode
+
