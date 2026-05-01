@@ -72,7 +72,12 @@
         <translation>输入安装路径%1</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+11"/>
+        <source>Binary Path:</source>
+        <translation>二进制路径:</translation>
+    </message>
+    <message>
+        <location line="-37"/>
         <source>1. Download FFmpeg (ffmpeg-7.1.1-full_build-shared.7z, 44.4 MB) from the official website
 2. Extract the archive to: C:\home\ffmpeg
 3. Add the &apos;bin&apos; folder to your user PATH environment variable</source>
@@ -121,12 +126,7 @@
         <translation>下载:</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Installation Path:</source>
-        <translation>安装路径:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Add Path to User PATH</source>
         <translation>增加用户路径</translation>
     </message>

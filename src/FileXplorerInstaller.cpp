@@ -31,19 +31,19 @@ ThirdPartyDependencyConfig::ThirdPartyDependencyConfig(int pageId, const LIBNAME
 
   switch (mLibName) {
     case LIBNAME::FFMPEG:
-      mDefaultDownloadTo = QString{R"(C:\home\ffmpeg\bin)"};
+      mDefaultBinaryPath = QString{R"(C:\home\ffmpeg\bin)"};
       mLog->setPlainText(tr("1. Download FFmpeg (ffmpeg-7.1.1-full_build-shared.7z, 44.4 MB) from the official website\n"
                             "2. Extract the archive to: C:\\home\\ffmpeg\n"
                             "3. Add the 'bin' folder to your user PATH environment variable"));
       break;
     case LIBNAME::MEDIA_INFO:
-      mDefaultDownloadTo = QString{R"(C:\home\mediaInfo\bin)"};
+      mDefaultBinaryPath = QString{R"(C:\home\mediaInfo\bin)"};
       mLog->setPlainText(tr("1. Download MediaInfo (mediaInfo.7z, 2.2 MB) from the official website\n"
                             "2. Extract the archive to: C:\\home\\mediaInfo\n"
                             "3. Add the 'bin' folder to your user PATH environment variable"));
       break;
     case LIBNAME::OPENSSL:
-      mDefaultDownloadTo = QString{R"(C:\Program Files\OpenSSL-Win64\bin)"};
+      mDefaultBinaryPath = QString{R"(C:\Program Files\OpenSSL-Win64\bin)"};
       mLog->setPlainText(tr("1. Download OpenSSL (Win64OpenSSL-3_5_1.msi, 280 MB) from the official website\n"
                             "2. Install to: C:\\Program Files\\OpenSSL-Win64\n"
                             "3. During installation, select 'Copy OpenSSL DLLs to: The OpenSSL binaries (/bin) directory'\n"
@@ -57,7 +57,7 @@ ThirdPartyDependencyConfig::ThirdPartyDependencyConfig(int pageId, const LIBNAME
   mDownloadDependencyLibBtn->setToolTip(tr("Open browser to download %1").arg(libDisplayName));
 
   mDownloadedToFolder = new QLineEdit{this};
-  mDownloadedToFolder->setText(mDefaultDownloadTo);
+  mDownloadedToFolder->setText(mDefaultBinaryPath);
   mDownloadedToFolder->setPlaceholderText(tr("Enter the installation path for %1").arg(libDisplayName));
 
   mAddToSystemVariableBtn = new QPushButton{tr("Add to user PATH"), this};
@@ -69,7 +69,7 @@ ThirdPartyDependencyConfig::ThirdPartyDependencyConfig(int pageId, const LIBNAME
 
   lo->addRow(tr("Installation Steps:"), mLog);
   lo->addRow(tr("Download:"), mDownloadDependencyLibBtn);
-  lo->addRow(tr("Installation Path:"), mDownloadedToFolder);
+  lo->addRow(tr("Binary Path:"), mDownloadedToFolder);
   lo->addRow("", mAddToSystemVariableBtn);
 
   setLayout(lo);
