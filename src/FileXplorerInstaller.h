@@ -26,7 +26,7 @@ private:
 
   LIBNAME mLibName{LIBNAME::INVALID_END};
   QUrl mDownloadPageUrl;
-  QString mDefaultDownloadTo;
+  QString mDefaultBinaryPath;
   QPlainTextEdit* mLog{nullptr};
   QLineEdit* mDownloadedToFolder{nullptr};
   QPushButton* mDownloadDependencyLibBtn{nullptr};
